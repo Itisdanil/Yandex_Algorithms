@@ -1,0 +1,12 @@
+a, b, c, d = map(int, input().split())
+size = []
+size1 = (a + c) * max(b, d)
+size.append((size1, a+c, max(b, d)))
+size2 = (a + d) * max(b, c)
+size.append((size2, a+d, max(b, c)))
+size3 = (b + c) * max(a, d)
+size.append((size3, b+c, max(a, d)))
+size4 = (b + d) * max(a, c)
+size.append((size4, b+d, max(a, c)))
+size = sorted(size)
+print(size[0][1], size[0][2])
